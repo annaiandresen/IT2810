@@ -7,8 +7,6 @@ const screenWhite = "#dddddd";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-let turnedOn = false;
-
 const createButton = (ctx, text, x, y, textWhite = true) => {
   ctx.lineWidth = 1;
   ctx.beginPath();
@@ -26,9 +24,10 @@ const createJoystick = (ctx, x, y) => {
   ctx.arc(x, y, 10, 0, 2 * Math.PI);
   ctx.fill();
 };
-let x = Math.floor(Math.random() * 370 + 210); //500
-let y = Math.floor(Math.random() * 170 + 110); //200
 
+// animation
+let x = Math.floor(Math.random() * 330 + 230);
+let y = Math.floor(Math.random() * 100 + 140);
 let dx = 1;
 let dy = 1;
 
@@ -58,6 +57,8 @@ const animate = () => {
   y += dy;
 };
 
+let turnedOn = false;
+
 const turnOff = () => {
   ctx.fillStyle = screenBlack;
   ctx.fillRect(210, 110, 380, 180);
@@ -74,7 +75,11 @@ const turnOn = () => {
   $("h3#turn_me_on").html("Turn me off");
 };
 
-const onCanvasClick = () => {
+/**
+ * Function called when the canvas element is clicked.
+ * Will either turn on or off the screen of the switch.
+ */
+const onCanvasClicked = () => {
   if (turnedOn) {
     turnOff();
   } else {
@@ -83,6 +88,10 @@ const onCanvasClick = () => {
   }
 };
 
+/**
+ * Draws the canvas element.
+ * It tries to create a Nintendo Switch.
+ */
 const drawCanvas = () => {
   // Screen
   ctx.fillStyle = black;
@@ -156,7 +165,9 @@ const drawCanvas = () => {
   createJoystick(ctx, 625, 210);
   createButton(ctx, "", 612.5, 240, false);
 
-  $("#canvas").on("click", onCanvasClick); // or canvas.addEventListener("click", onCanvasClick);;
+  $("#canvas").on("click", onCanvasClicked); // or canvas.addEventListener("click", onCanvasClicked);;
 };
 
-drawCanvas();
+$(document).ready(function () {
+  drawCanvas();
+});
