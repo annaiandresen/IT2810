@@ -59,11 +59,14 @@ const animate = () => {
 
 let turnedOn = false;
 
+const audioElement = document.createElement("audio");
+audioElement.setAttribute("src", "./assets/mario-time.mp3");
+
 const turnOff = () => {
   ctx.fillStyle = screenBlack;
   ctx.fillRect(210, 110, 380, 180);
   turnedOn = false;
-  $("h3#turn_me_on").html("Turn me on");
+  $("#turn_me_on").html("Turn me on");
   if (animationFrame) cancelAnimationFrame(animationFrame);
 };
 
@@ -72,7 +75,8 @@ const turnOn = () => {
   ctx.fillStyle = screenWhite;
   ctx.fillRect(210, 110, 380, 180);
   turnedOn = true;
-  $("h3#turn_me_on").html("Turn me off");
+  $("#turn_me_on").html("Turn me off");
+  audioElement.play();
 };
 
 /**

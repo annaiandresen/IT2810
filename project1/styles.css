@@ -19,6 +19,7 @@ html {
 }
 h3 {
   padding: 0 1rem;
+  font-size: 4rem;
 }
 
 .container {
@@ -50,7 +51,7 @@ h3 {
   align-items: center;
 }
 
-i {
+.caption > i {
   padding: 0 1em;
 }
 
@@ -86,15 +87,72 @@ svg:hover {
 #floating_chevron {
   display: block;
   position: fixed;
-  font-size: 10rem;
-  color: var(--c-red);
+  font-size: 3rem;
+  color: var(--c-white);
   bottom: 0;
   opacity: 80%;
   z-index: 9;
-  padding: 0;
-  right: 50%;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--c-red-lighter);
+  right: 0;
 }
 
 #floating_chevron:hover {
   cursor: pointer;
+}
+
+.start_buttons {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+#floating_circle {
+  position: relative;
+  visibility: hidden;
+  animation: floating 7s linear infinite;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(150px, 130px);
+  }
+  50% {
+    transform: translate(200px, 0px);
+  }
+  70% {
+    transform: translate(330px, 130px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes floating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  25% {
+    -webkit-transform: translate(150px, 130px);
+    -o-transform: translate(150px, 130px);
+  }
+  50% {
+    -webkit-transform: translate(200px, 0px);
+    -o-transform: translate(150px, 130px);
+  }
+  70% {
+    -webkit-transform: translate(330px, 130px);
+    -o-transform: translate(150px, 130px);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
