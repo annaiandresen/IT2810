@@ -17,7 +17,7 @@ $(document).ready(function () {
   const onSvgClicked = () => {
     if (turnedOn) {
       $("#screen").css({ fill: "#1c1c1c" });
-      $("#or_me").html("Turn me on again 😡");
+      $("#or_me").html("Again 😡");
       $("#floating_circle").css({ visibility: "hidden" });
       turnedOn = false;
     } else {
