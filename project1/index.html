@@ -199,13 +199,29 @@
             draw figures. Most of the animation and scripting is done in
             <code>canvas.js</code>. The figure is drawn in the
             <code>drawCanvas()</code> function, while the animation is executed
-            in the <code>animate()</code> function.
+            in the <code>animate()</code> function, with
+            <code>requestAnimationFrame()</code>. The animation starts on a
+            random x and y coordinate within the "screen" when the screen is
+            clicked, and moves in a direction until it hits the screen edge.
+            Between each redraw, the canvas is deleted to display movement. The
+            animation stops when the canvas element is clicked again, in which
+            <code>cancelAnimationFrame()</code> is called.
           </p>
           <h2>SVG & CSS animation</h2>
           <p>
             The SVG is drawn in the HTML body. The animation is done via css
-            animation. Due to time restriction, having the circle bouncing
-            around randomly was not achievable.
+            animation in <code>styles.css</code>. Due to time restriction,
+            having the circle bouncing around randomly was not achievable. The
+            animation always starts on the same x and y coordinate and moves in
+            the same lane. Similar to the canvas animation, the animation starts
+            when the svg is clicked by setting the elements visibility to
+            <code>visible</code>. The line
+            <code>animation: floating 7s linear infinite;</code> tells that the
+            animation will appear in a floating animation which is specified in
+            a <code>@keyframes</code> rule, be completed in 7 seconds in which
+            all parts use the same amount of time. The floating animation
+            specifies each position after a % of time. Visibility is set to
+            <code>hidden</code> when the svg is clicked again.
           </p>
         </section>
         <section class="doc_section">
@@ -213,7 +229,9 @@
           <p>
             To ensure cross-browser compatability, the website has been tested
             in Safari, Google Chrome and Mozilla Firefox. All browsers displayed
-            similar behaviour.
+            similar behaviour. <code>-webkit-animation/-o-animation</code> and
+            <code>@keyframes-webkit</code> is also used to ensure cross-browser
+            compatability. Several fallback fonts have also been selected.
           </p>
           <h2>Sources</h2>
           <ul>
