@@ -4,6 +4,7 @@ $(document).ready(function () {
 
   const onChevronClicked = () => {
     $(".floating_container").click(function () {
+      $("#docs").css({ display: "block", visibility: "visible" });
       $("html, body").animate(
         {
           scrollTop: $("#docs").offset().top,
@@ -28,15 +29,7 @@ $(document).ready(function () {
       turnedOn = true;
     }
   };
-  $(window).scroll(function () {
-    if ($("body").height() <= $(window).height() + $(window).scrollTop()) {
-      $(".floating_container").fadeOut();
-    } else {
-      $(".floating_container").fadeIn();
-    }
-  });
 
   onChevronClicked();
-
   $("#svg").click(onSvgClicked);
 });

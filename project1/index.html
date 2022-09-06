@@ -7,7 +7,6 @@
     <title>IT2810 - Project 1</title>
 
     <!-- Stylesheet, font, favicons and icons -->
-    <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
       href="http://fonts.googleapis.com/css?family=Poppins"
@@ -24,6 +23,7 @@
       sizes="16x16"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./styles.css" />
     <script
       src="https://kit.fontawesome.com/e377f46f4f.js"
       crossorigin="anonymous"
@@ -35,6 +35,8 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="./canvas.js"></script>
+    <script src="./main.js"></script>
   </head>
   <body>
     <!-- Canvas section -->
@@ -111,133 +113,124 @@
         </p>
       </div>
     </div>
-    <h1>About the artist</h1>
-    <div class="doc_container">
-      <section class="doc_section">
-        <h2>Personal life</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
-        <h2>Other notable works of art</h2>
-        <ul>
-          <li>1983: Super famicon</li>
-          <li>1996: Nintendo 128</li>
-          <li>2001: GameSylinder</li>
-          <li>2006: Nintendo Woop</li>
-          <li>2012: Nintendo WoopU</li>
-          <li>2016: Nintendo Swap</li>
-        </ul>
-      </section>
-      <div class="photo_wrapper">
-        <img id="author_pic" src="./assets/author.jpg" alt="author" />
-        <p class="caption">Author Authornuma</p>
+
+    <!-- Artist section-->
+    <div id="about_section">
+      <h1>About the artist</h1>
+      <div class="doc_container">
+        <section class="doc_section">
+          <h2>Personal life</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <h2>Other notable works of art</h2>
+          <ul>
+            <li>1983: Super famicon</li>
+            <li>1996: Nintendo 128</li>
+            <li>2001: GameSylinder</li>
+            <li>2006: Nintendo Woop</li>
+            <li>2012: Nintendo WoopU</li>
+            <li>2016: Nintendo Swoop</li>
+          </ul>
+        </section>
+        <div class="photo_wrapper">
+          <img id="author_pic" src="./assets/author.jpg" alt="author" />
+          <p class="caption">Author Authornuma</p>
+        </div>
       </div>
     </div>
     <div id="docs" class="wrapper">
       <h1>Docs</h1>
       <div class="doc_container">
         <section class="doc_section">
-          <h2>Innhold og funksjonalitet</h2>
+          <h2>CSS grid & layout</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            In this page, CSS Flexbox was chosen as an appropriate solution for
+            the images. The same results could have been implemented with grid
+            as well, but due to the small number of elements in the container,
+            Flexbox was more appropriate. With more items, using grid to further
+            customize placement of each elements might give a cleaner and more
+            refined look.
           </p>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            On the other hand, grid was used to position elements in the
+            document section. Experience with both layout types will be useful
+            for further development.
           </p>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            To ensure that the content is readable on smaller computer screens,
+            a media query is used that changes the layout from grid to block and
+            flex-row to flex-column.
           </p>
         </section>
         <section class="doc_section">
-          <h2>Bruk av teknologi</h2>
+          <h2>jQuery</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            <a href="https://jquery.com">jQuery</a> is a Javascript library that
+            makes DOM manipulation, animation and event handling easier to write
+            in vanilla JS. In this web page, jQuery has been used in the files
+            <code>canvas.js</code> and <code>main.js</code>. These files have
+            been imported at top of the HTML document, as the script will not
+            run before the document is ready (due to jQuery
+            <code>$(document).ready(function () {...}</code> which encapsulates
+            the code.) In jQuery, you can access each element in the HTML
+            document by accessing their selector. You access the selector by
+            writing <code>$("selector")</code>. E.g.,
+            <code>$(".wrapper").click(function () {...}</code>, which adds an
+            event listener to html elements with the class "wrapper", that
+            listens for the "click" event.
           </p>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            In this page, jQuery is imported using the online version. It is
+            therefore required to be connected to the Internet in order to view
+            this web page.
           </p>
         </section>
         <section class="doc_section">
-          <h2>Documentasjon</h2>
+          <h2>HTML Canvas</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            HTML Canvas is an element which can be accessed with Javascript to
+            draw figures. Most of the animation and scripting is done in
+            <code>canvas.js</code>. The figure is drawn in the
+            <code>drawCanvas()</code> function, while the animation is executed
+            in the <code>animate()</code> function.
           </p>
+          <h2>SVG & CSS animation</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            The SVG is drawn in the HTML body. The animation is done via css
+            animation. Due to time restriction, having the circle bouncing
+            around randomly was not achievable.
           </p>
         </section>
         <section class="doc_section">
           <h2>Testing</h2>
           <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
+            To ensure cross-browser compatability, the website has been tested
+            in Safari, Google Chrome and Mozilla Firefox. All browsers displayed
+            similar behaviour.
           </p>
-          <p>
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum."
-          </p>
+          <h2>Sources</h2>
+          <ul>
+            <li><a href="https://api.jquery.com/">jQuery docs</a></li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=yq2au9EfeRQ&t=621s"
+                >YT tutorial on canvas animation</a
+              >
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/SVG"
+                >Mozilla SVG docs</a
+              >
+            </li>
+          </ul>
         </section>
       </div>
     </div>
-    <script src="./canvas.js"></script>
-    <script src="./main.js"></script>
   </body>
 </html>
